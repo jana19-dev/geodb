@@ -1,0 +1,42 @@
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  height: 100vh;
+  height: 100dvh;
+  min-width: 360px;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #93c5fd;
+  border-radius: 8px;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #93c5fd transparent;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  background: #93c5fd;
+  padding: 0.5rem;
+}
+
+::selection {
+  background: #93c5fd;
+}
