@@ -11,8 +11,10 @@ datasource db {
 model Project {
   id          String    @id @default(uuid())
   name        String
-  type        String    @default("BUILDING")  // BUILDING, ROAD, BRIDGE, RETAININGWALL, WATER, WASTEWATER, TUNNEL
+  type        String    @default("BUILDING") // BUILDING, ROAD, BRIDGE, RETAININGWALL, WATER, WASTEWATER, TUNNEL
   description String?
+  lng         Float     @default(-77.0354461669922) // Washington DC
+  lat         Float     @default(38.8951110839844) // Washington DC
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
   keywords    Keyword[]
